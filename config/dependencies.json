@@ -1,0 +1,30 @@
+{
+    "dependencies": [
+        {
+            "interfaces": ["pallo\\library\\minifier\\Minifier", "pallo\\library\\minifier\\JsMinifier"],
+            "class": "pallo\\library\\minifier\\JsMinifier",
+            "id": "js"
+        },
+        {
+            "interfaces": ["pallo\\library\\minifier\\Minifier", "pallo\\library\\minifier\\CssMinifier"],
+            "class": "pallo\\library\\minifier\\CssMinifier",
+            "id": "css",
+            "calls": [
+                "setImageUrlGenerator",
+                {
+                    "method": "setBaseUrl",
+                    "arguments": [
+                        {
+                            "name": "baseUrl",
+                            "type": "call",
+                            "properties": {
+                                "interface": "pallo\\library\\mvc\\Request",
+                                "method": "getBaseUrl"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
