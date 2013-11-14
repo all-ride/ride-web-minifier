@@ -1,6 +1,25 @@
 {
     "dependencies": [
         {
+            "interfaces": "pallo\\application\\cache\\control\\CacheControl",
+            "class": "pallo\\application\\cache\\control\\MinifierCacheControl",
+            "id": "minifier",
+            "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "minifiers",
+                            "type": "dependencies",
+                            "properties": {
+                                "interface": "pallo\\library\\minifier\\Minifier"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },    
+        {
             "interfaces": ["pallo\\library\\minifier\\Minifier", "pallo\\library\\minifier\\JsMinifier"],
             "class": "pallo\\library\\minifier\\JsMinifier",
             "id": "js"
