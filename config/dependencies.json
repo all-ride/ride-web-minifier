@@ -1,8 +1,8 @@
 {
     "dependencies": [
         {
-            "interfaces": "pallo\\application\\cache\\control\\CacheControl",
-            "class": "pallo\\application\\cache\\control\\MinifierCacheControl",
+            "interfaces": "ride\\application\\cache\\control\\CacheControl",
+            "class": "ride\\application\\cache\\control\\MinifierCacheControl",
             "id": "minifier",
             "calls": [
                 {
@@ -12,7 +12,7 @@
                             "name": "minifiers",
                             "type": "dependencies",
                             "properties": {
-                                "interface": "pallo\\library\\minifier\\Minifier"
+                                "interface": "ride\\library\\minifier\\Minifier"
                             }
                         }
                     ]
@@ -20,13 +20,13 @@
             ]
         },    
         {
-            "interfaces": ["pallo\\library\\minifier\\Minifier", "pallo\\library\\minifier\\JsMinifier"],
-            "class": "pallo\\library\\minifier\\JsMinifier",
+            "interfaces": ["ride\\library\\minifier\\Minifier", "ride\\library\\minifier\\JsMinifier"],
+            "class": "ride\\library\\minifier\\JsMinifier",
             "id": "js"
         },
         {
-            "interfaces": ["pallo\\library\\minifier\\Minifier", "pallo\\library\\minifier\\CssMinifier"],
-            "class": "pallo\\library\\minifier\\CssMinifier",
+            "interfaces": ["ride\\library\\minifier\\Minifier", "ride\\library\\minifier\\CssMinifier"],
+            "class": "ride\\library\\minifier\\CssMinifier",
             "id": "css",
             "calls": [
                 "setImageUrlGenerator",
@@ -37,7 +37,7 @@
                             "name": "baseUrl",
                             "type": "call",
                             "properties": {
-                                "interface": "pallo\\library\\mvc\\Request",
+                                "interface": "ride\\library\\mvc\\Request",
                                 "method": "getBaseUrl"
                             }
                         }
