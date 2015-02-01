@@ -21,7 +21,7 @@ class MinifierCacheControl extends AbstractCacheControl {
 
     /**
      * Constructs a new image cache control
-     * @param ride\web\image\ImageUrlGenerator $imageUrlGenerator
+     * @param \ride\web\image\ImageUrlGenerator $imageUrlGenerator
      * @return null
      */
     public function __construct(array $minifiers) {
