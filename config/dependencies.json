@@ -18,11 +18,25 @@
                     ]
                 }
             ]
-        },    
+        },
         {
             "interfaces": ["ride\\library\\minifier\\Minifier", "ride\\library\\minifier\\JsMinifier"],
             "class": "ride\\library\\minifier\\JsMinifier",
-            "id": "js"
+            "id": "js",
+            "calls": [
+                {
+                    "method": "setLazy",
+                    "arguments": [
+                        {
+                            "name": "lazy",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "minifier.lazy"
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "interfaces": ["ride\\library\\minifier\\Minifier", "ride\\library\\minifier\\CssMinifier"],
@@ -39,6 +53,18 @@
                             "properties": {
                                 "interface": "ride\\library\\mvc\\Request",
                                 "method": "getBaseUrl"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setLazy",
+                    "arguments": [
+                        {
+                            "name": "lazy",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "minifier.lazy"
                             }
                         }
                     ]
