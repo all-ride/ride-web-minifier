@@ -192,7 +192,7 @@ class MinifierService {
 
         if ($this->isJsDisabled()) {
             foreach ($resources as $resource) {
-                if ($this->isUrl($resource)) {
+                if ($this->isUrl($resource) || strpos($resource, '<script') === 0) {
                     $result[] = $resource;
                 } else {
                     $result[] = $baseUrl . $resource;
@@ -211,7 +211,7 @@ class MinifierService {
 
         $toMinify = array();
         foreach ($resources as $resource) {
-            if (!$this->isUrl($resource)) {
+            if (!($this->isUrl($resource) || strpos($resource, '<script') === 0)) {
                 $toMinify[] = $resource;
 
                 continue;

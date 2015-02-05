@@ -75,6 +75,27 @@
             "class": "ride\\service\\MinifierService",
             "id": "minifier",
             "calls": [
+                {
+                    "method": "__construct",
+                    "arguments": [
+                        {
+                            "name": "jsMinifier",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "ride\\library\\minifier\\Minifier",
+                                "id": "js"
+                            }
+                        },
+                        {
+                            "name": "cssMinifier",
+                            "type": "dependency",
+                            "properties": {
+                                "interface": "ride\\library\\minifier\\Minifier",
+                                "id": "css"
+                            }
+                        }
+                    ]
+                },
                 "setLog",
                 {
                     "method": "setBaseUrl",
