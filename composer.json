@@ -17,7 +17,8 @@
     },
     "autoload": {
         "psr-0": {
-            "ride\\application\\cache\\control\\": ["src/", "test/src/"]
+            "ride\\application\\cache\\control\\": ["src/"],
+            "ride\\service\\MinifierService": ["src/"]
         }
-    }    
+    }
 }

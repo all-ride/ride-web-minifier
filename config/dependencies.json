@@ -70,6 +70,50 @@
                     ]
                 }
             ]
+        },
+        {
+            "class": "ride\\service\\MinifierService",
+            "id": "minifier",
+            "calls": [
+                "setLog",
+                {
+                    "method": "setBaseUrl",
+                    "arguments": [
+                        {
+                            "name": "baseUrl",
+                            "type": "call",
+                            "properties": {
+                                "interface": "ride\\library\\mvc\\Request",
+                                "method": "getBaseUrl"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setIsJsDisabled",
+                    "arguments": [
+                        {
+                            "name": "isJsDisabled",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "minifier.disable.js"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "method": "setIsCssDisabled",
+                    "arguments": [
+                        {
+                            "name": "isCssDisabled",
+                            "type": "parameter",
+                            "properties": {
+                                "key": "minifier.disable.css"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
