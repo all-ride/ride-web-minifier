@@ -217,9 +217,13 @@ class MinifierService {
                 continue;
             }
 
+            if ($toMinify) {
+                $result[] = $baseUrl . $this->minify($this->jsMinifier, $toMinify);
+
+                $toMinify = array();
+            }
+
             $result[] = $resource;
-            $result[] = $baseUrl . $this->minify($this->jsMinifier, $toMinify);
-            $toMinify = array();
         }
 
         if ($toMinify) {
