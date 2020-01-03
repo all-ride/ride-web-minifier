@@ -256,7 +256,7 @@ class MinifierService {
      * @return boolean
      */
     protected function isUrl($resource) {
-        return filter_var($resource, FILTER_VALIDATE_URL, FILTER_FLAG_SCHEME_REQUIRED);
+        return filter_var($resource, FILTER_VALIDATE_URL);
     }
 
 }
